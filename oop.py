@@ -20,6 +20,11 @@ class Employee:
   def _get_raise_amount(self):
     return self.raise_amount + 1
 
+  @classmethod
+  def set_raise_amount(cls, amount):
+    cls.raise_amount = amount
+
+# CREATE INSTANCES
 emp_1 = Employee('Taylor', 'Buckner', 69000)
 emp_2 = Employee('Anna', 'Buckner', 69000)
 
@@ -28,9 +33,7 @@ print(emp_1.full_name())
 print(Employee.full_name(emp_1)) # Can pass instance to Class method.
 print(emp_2.full_name())
 
-print(emp_1.pay)
-emp_1.apply_raise()
-print(emp_1.pay)
+Employee.set_raise_amount(.05)
 
-print(emp_1.__dict__)
-print(emp_1.number_of_employees)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
