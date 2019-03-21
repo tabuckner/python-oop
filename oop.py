@@ -65,3 +65,10 @@ dev_1.apply_raise()
 print(dev_1.pay)
 print(dev_2.__dict__)
 man_1.print_employees()
+
+print(isinstance(man_1, Developer)) # False
+print(isinstance(man_1, Employee)) # True
+print(isinstance(man_1, Manager)) # True
+print(issubclass(Manager, Developer)) # False
+print(issubclass(Manager, Employee)) # True
+
